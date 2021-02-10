@@ -1,0 +1,50 @@
+/*pseudo code*/
+
+Declaring mySecond variable (Referance variable to change respective values of minutes and hours)
+Declaring intervalHandler variable 
+
+/*Function to take user value through DOM*/
+function Input:
+    Initializing displayTime to input by html id
+    Initializing mySec to mySeconds
+    Initializing myMinutes to (mySeconds / 60)
+    Initializing myHours to (mySeconds/60*60)
+    Initializing message to myMinutes to string + mySec to string
+    appending updated values in HTML
+    if mySeconds is zero:
+        print breakpoint to consol
+        clearInterval(intervalHandler)
+        reseting page
+    mySeconds decreasing by 1
+
+/*START COUNTER function*/
+function startCounter :
+    Initializing myInput to input by id value
+    validating myInput
+    setting mySeconds to myInput
+    Initializing intervalHandler to default setInterval with valid arguments (Input, 1000)
+displaying none to input box
+
+/*PAUSE function*/
+Declaring pause fucntion:
+    using default function clearInterval to pause intervalHandler
+
+/*RESUME function*/
+function resume:
+    if displayTime  is less than zero:
+        calling reset function
+        calling startCounter function
+    else:
+       set intervalHandler using setInterval function on calling 1000 ms
+
+/*RESET function*/
+function reset :
+    setting mySecond to zero
+    displaying none to input tab
+    resetting intervalHandler
+
+/*RESTART function*/
+fucntion restat:
+    setting mySecond to zero
+    resetting intervalHandler
+    calling startCounter function
